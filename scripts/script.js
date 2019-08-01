@@ -19,18 +19,16 @@ class Item {
 function handleSubmit(event) {
   event.preventDefault();
   console.log("I am working");
-  // myTotal.add(event.target[0], event.target[1]);
+  .add(event.target[0], event.target[1]);
 }
 
 // !Assignment Area
-
+let budgetList = new List();
 let foodList = new List();
 let enterList = new List();
 let clothList = new List();
 let billList = new List();
 let form = document.querySelector("form");
-
-let myTotal = new List();
 
 // !Event Listeners
 form.addEventListener("submit", handleSubmit);
