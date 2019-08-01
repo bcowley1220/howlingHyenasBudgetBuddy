@@ -17,25 +17,46 @@ class Item {
 }
 
 // !Handling Functions
-function handleSubmit(event) {
+function foodFormHandle(event) {
   event.preventDefault();
   console.log("I am working");
   foodList.add(event.target[0].value, event.target[1].value);
 }
+function entFormHandle(event) {
+  event.preventDefault();
+  console.log("I am working");
+  enterList.add(event.target[0].value, event.target[1].value);
+}
+function clothFormHandle(event) {
+  event.preventDefault();
+  console.log("I am working");
+  clothList.add(event.target[0].value, event.target[1].value);
+}
+function billFormHandle(event) {
+  event.preventDefault();
+  console.log("I am working");
+  billList.add(event.target[0].value, event.target[1].value);
+}
 
-// !Assignment Area
+// !List Assisnment
 let budgetList = new List();
 let foodList = new List();
 let enterList = new List();
 let clothList = new List();
 let billList = new List();
 
-let foodForm = document.getElementById("foodForm");
+// !querySelector variables
+let foodForm = document.querySelector("#foodForm");
+let entForm = document.querySelector("#entForm");
+let clothForm = document.querySelector("#clothForm");
+let billForm = document.querySelector("#billForm");
 
 // !Event Listeners
-foodForm.addEventListener("submit", handleSubmit);
+foodForm.addEventListener("submit", foodFormHandle);
+entForm.addEventListener("submit", entFormHandle);
+clothForm.addEventListener("submit", clothFormHandle);
+billForm.addEventListener("submit", billFormHandle);
 
-console.log(foodList);
 // function revealPurple(event){
 //   console.log('I have been clicked.')
 //   purple.style.visibility = "visible";
