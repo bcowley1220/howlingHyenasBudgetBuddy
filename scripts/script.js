@@ -1,10 +1,11 @@
+// !Class Section
 class List {
   constructor() {
     this.list = [];
   }
   add(name, price) {
     let newItem = new Item(name, price);
-    this.contacts.push(newItem);
+    this.list.push(newItem);
   }
 }
 
@@ -19,7 +20,7 @@ class Item {
 function handleSubmit(event) {
   event.preventDefault();
   console.log("I am working");
-  .add(event.target[0], event.target[1]);
+  foodList.add(event.target[0].value, event.target[1].value);
 }
 
 // !Assignment Area
@@ -28,11 +29,13 @@ let foodList = new List();
 let enterList = new List();
 let clothList = new List();
 let billList = new List();
-let form = document.querySelector("form");
+
+let foodForm = document.getElementById("foodForm");
 
 // !Event Listeners
-form.addEventListener("submit", handleSubmit);
+foodForm.addEventListener("submit", handleSubmit);
 
+console.log(foodList);
 // function revealPurple(event){
 //   console.log('I have been clicked.')
 //   purple.style.visibility = "visible";

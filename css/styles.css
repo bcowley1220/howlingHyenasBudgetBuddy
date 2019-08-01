@@ -32,4 +32,8 @@ main {
 }
 
 .bigCard {
+  height: 95vh;
+  wisdth: 100%;
+  display: flex;
+  flex-direction: column;
 }
