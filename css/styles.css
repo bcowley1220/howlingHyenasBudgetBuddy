@@ -1,35 +1,81 @@
 /* !Mains/Elements */
+
 * {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
 }
 
-html,
-body {
-  height: 100vh;
-  width: 100vw;
+html, body {
+    height: 100vh;
+    width: 100vw;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    background-color: #3B5284;
 }
 
 header {
-  height: 5vh;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background: lightblue;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: lightblue;
 }
 
-main {
-  height: 95vh;
+a {
+    text-decoration: none;
 }
-.smallCard {
+
+.opening_card {
+    visibility: hidden;
+}
+
+/* margin left is a janky fix */
+
+.SmallCard {
+    height: 25%;
+    width: 85%;
+    border-radius: 10px;
+    margin: 2px;
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+.food {
+    background-color: #5BA8A0;
+}
+
+.entertainment {
+    background-color: #CBE54E;
+}
+
+.clothing {
+    background-color: #94B447;
+}
+
+.bills {
+    background-color: #5D6E1E;
+}
+
+/* main {
+    height: 95vh;
+} */
+
+div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
 .bigCard {
+    height: 95vh;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
 }

@@ -1,118 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <title>Greenback</title>
-  </head>
-  <body>
-    <header>
-      <!-- !logo container -->
+</head>
 
-      <div class="logo"></div>
-      <!-- !Total$ Container -->
-      <div class="total"></div>
-      <!-- !Nav -->
-      <div class="contact_us"><a href="#">Contact Us</a></div>
+<body>
+    <header>
+        <!-- !logo container -->
+        <i class="fas fa-frog"></i>
+        <div class="logo"></div>
+        <!-- !Total$ Container -->
+        <div class="total"></div>
+        <!-- !Nav -->
+        <div class="contact_us"><a href="#">Contact Us</a></div>
     </header>
     <main>
-      <!-- !Initial Form Card  -->
-      <section>
-        <div class="opening_card">
-          <h2>Give Me Your Money</h2>
-          <form action="">
-            <label for=""></label>
-            <input type="number" placeholder="Food Budget" />
-            <label for=""></label>
-            <input type="number" placeholder="Entertainment Budget" />
-            <label for=""></label>
-            <input type="number" placeholder="Clothing Budget" />
-            <label for=""></label>
-            <input type="number" placeholder="Bill Budget" />
-            <button>Click Me</button>
-            <button>Reset</button>
-          </form>
-        </div>
-      </section>
+        <!-- !Initial Form Card  -->
+        <!-- <section>
+            <div class="opening_card bigCard">
+                <h2>Give Me Your Money</h2>
+                <form action="">
+                    <label for=""></label>
+                    <input type="number" placeholder="Food Budget" />
+                    <label for=""></label>
+                    <input type="number" placeholder="Entertainment Budget" />
+                    <label for=""></label>
+                    <input type="number" placeholder="Clothing Budget" />
+                    <label for=""></label>
+                    <input type="number" placeholder="Bill Budget" />
+                    <button>Click Me</button>
+                    <button>Reset</button>
+                </form>
+            </div>
+        </section> -->
 
-      <!-- !Nav Card -->
-      <section>
-        <div class="food SmallCard">
-          <div>Food Button</div>
-        </div>
-        <div class="entertainment SmallCard">
-          <div>Entertainment Button</div>
-        </div>
-        <div class="clothing SmallCard">
-          <div>Clothing Button</div>
-        </div>
-        <div class="bills SmallCard">
-          <div>Bills Button</div>
-        </div>
-      </section>
-      <!-- !Food Section -->
-      <section>
-        <div class="bigCard food">
-          <h2>Food</h2>
-          <form action="">
-            <label for=""></label>
-            <input type="text" placeholder="Item" />
-            <label for=""></label>
-            <input type="number" placeholder="$ Amount" />
-            <button>Submit</button>
-            <button>Return or Reset</button>
-          </form>
-          <div class="foodFormTotalBox" food></div>
-        </div>
-      </section>
-      <!-- !Entertainment Section -->
-      <section>
-        <div class="bigCard ent">
-          <h2>Entertainment</h2>
-          <form action="">
-            <label for=""></label>
-            <input type="text" placeholder="Item" />
-            <label for=""></label>
-            <input type="number" placeholder="$ Amount" />
-            <button>Submit</button>
-            <button>Return or Reset</button>
-          </form>
-          <div class="entertainmentFormTotalBox"></div>
-        </div>
-      </section>
-      <!-- !Clothing Section -->
-      <section>
-        <div class="bigCard clo">
-          <h2>Clothing</h2>
-          <form action="">
-            <label for=""></label>
-            <input type="text" placeholder="Item" />
-            <label for=""></label>
-            <input type="number" placeholder="$ Amount" />
-            <button>Submit</button>
-            <button>Return or Reset</button>
-          </form>
-          <div class="clothingformTotalBox"></div>
-        </div>
-      </section>
-      <!-- !Bills Section -->
-      <section>
-        <div class="bigCard bills">
-          <h2>Bills</h2>
-          <form action="">
-            <label for=""></label>
-            <input type="text" placeholder="Item" />
-            <label for=""></label>
-            <input type="number" placeholder="$ Amount" />
-            <button>Submit</button>
-            <button>Return or Reset</button>
-          </form>
-          <div class="billsFormTotalBox"></div>
-        </div>
-      </section>
+        <!-- !Nav Card -->
+        <section class="bigCard">
+            <div class="food SmallCard">
+                <div>Food</div>
+            </div>
+            <div class="entertainment SmallCard">
+                <div>Entertainment</div>
+            </div>
+            <div class="clothing SmallCard">
+                <div>Clothing</div>
+            </div>
+            <div class="bills SmallCard">
+                <div>Bills</div>
+            </div>
+        </section>
+        <!-- !Food Section -->
+        <!-- <section>
+            <div class="bigCard food">
+                <h2>Food</h2>
+                <form action="">
+                    <label for=""></label>
+                    <input type="text" placeholder="Item" />
+                    <label for=""></label>
+                    <input type="number" placeholder="$ Amount" />
+                    <button>Submit</button>
+                    <button>Return or Reset</button>
+                </form>
+                <div class="foodFormTotalBox" food></div>
+            </div>
+        </section>
+        <!-- !Entertainment Section -->
+        <!-- <section>
+            <div class="bigCard ent">
+                <h2>Entertainment</h2>
+                <form action="">
+                    <label for=""></label>
+                    <input type="text" placeholder="Item" />
+                    <label for=""></label>
+                    <input type="number" placeholder="$ Amount" />
+                    <button>Submit</button>
+                    <button>Return or Reset</button>
+                </form>
+                <div class="entertainmentFormTotalBox"></div>
+            </div>
+        </section>
+        <!-- !Clothing Section -->
+        <!-- <section>
+            <div class="bigCard clo">
+                <h2>Clothing</h2>
+                <form action="">
+                    <label for=""></label>
+                    <input type="text" placeholder="Item" />
+                    <label for=""></label>
+                    <input type="number" placeholder="$ Amount" />
+                    <button>Submit</button>
+                    <button>Return or Reset</button>
+                </form>
+                <div class="clothingformTotalBox"></div>
+            </div>
+        </section> -->
+        <!-- !Bills Section -->
+        <!-- <section>
+            <div class="bigCard bills">
+                <h2>Bills</h2>
+                <form action="">
+                    <label for=""></label>
+                    <input type="text" placeholder="Item" />
+                    <label for=""></label>
+                    <input type="number" placeholder="$ Amount" />
+                    <button>Submit</button>
+                    <button>Return or Reset</button>
+                </form>
+                <div class="billsFormTotalBox"></div>
+            </div>
+        </section>  -->
     </main>
     <script src="scripts/script.js"></script>
-  </body>
+</body>
+
 </html>
