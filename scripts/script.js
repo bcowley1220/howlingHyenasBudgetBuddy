@@ -2,6 +2,10 @@ class List {
   constructor() {
     this.list = [];
   }
+  add(name, price) {
+    let newItem = new Item(name, price);
+    this.contacts.push(newItem);
+  }
 }
 
 class Item {
@@ -14,10 +18,16 @@ class Item {
 // !Handling Functions
 function handleSubmit(event) {
   event.preventDefault();
-  myTotal.add(event.target[0], event.target[1]);
+  console.log("I am working");
+  // myTotal.add(event.target[0], event.target[1]);
 }
 
 // !Assignment Area
+
+let foodList = new List();
+let enterList = new List();
+let clothList = new List();
+let billList = new List();
 let form = document.querySelector("form");
 
 let myTotal = new List();
