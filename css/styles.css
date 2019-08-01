@@ -1,8 +1,33 @@
+/* !Mains/Elements */
 * {
   padding: 0;
   margin: 0;
 }
 
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: lightblue;
+}
+
+main {
+  height: 95vh;
+}
 .smallCard {
 }
 
