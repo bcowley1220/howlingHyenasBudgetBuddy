@@ -7,17 +7,6 @@ class List {
     let newItem = new Item(name, price);
     this.list.push(newItem);
   }
-  display() {
-    document.querySelector(".infoContainer").innerHTML = "";
-    this.list.forEach(item => {
-      const div = document.createElement("div");
-      // div.classList.add();
-      div.innerHTML = `
-      <p>Item: ${item.name}</p><p>Price: ${item.price}</p>
-      `;
-      document.querySelector(".infoContainer").append(div);
-    });
-  }
 }
 
 class Item {
@@ -27,30 +16,41 @@ class Item {
   }
 }
 
+function display(list, location) {
+  document.querySelector(location).innerHTML = "";
+  for (let item of list) {
+    const div = document.createElement("div");
+    // div.classList.add();
+    div.innerHTML = `
+      <p>Item: ${item.name}</p><p>Price: ${item.price}</p>
+      `;
+    document.querySelector(location).append(div);
+  }
+}
 // !Handling Functions
 function foodFormHandle(event) {
   event.preventDefault();
   console.log("I am working");
   foodList.add(event.target[0].value, event.target[1].value);
-  foodList.display();
+  display(foodList.list, "#itemFood");
 }
 function entFormHandle(event) {
   event.preventDefault();
   console.log("I am working");
   enterList.add(event.target[0].value, event.target[1].value);
-  enterList.display();
+  display(enterList.list, "#itemEnt");
 }
 function clothFormHandle(event) {
   event.preventDefault();
   console.log("I am working");
   clothList.add(event.target[0].value, event.target[1].value);
-  clothList.display();
+  display(clothList.list, "#itemCloth");
 }
 function billFormHandle(event) {
   event.preventDefault();
   console.log("I am working");
   billList.add(event.target[0].value, event.target[1].value);
-  billList.display();
+  display(billList.list, "#itemBill");
 }
 
 // !List Assisnment
