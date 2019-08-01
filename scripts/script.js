@@ -7,6 +7,17 @@ class List {
     let newItem = new Item(name, price);
     this.list.push(newItem);
   }
+  display() {
+    document.querySelector(".infoContainer").innerHTML = "";
+    this.list.forEach(item => {
+      const div = document.createElement("div");
+      // div.classList.add();
+      div.innerHTML = `
+      <p>Item: ${item.name}</p><p>Price: ${item.price}</p>
+      `;
+      document.querySelector(".infoContainer").append(div);
+    });
+  }
 }
 
 class Item {
@@ -21,21 +32,25 @@ function foodFormHandle(event) {
   event.preventDefault();
   console.log("I am working");
   foodList.add(event.target[0].value, event.target[1].value);
+  foodList.display();
 }
 function entFormHandle(event) {
   event.preventDefault();
   console.log("I am working");
   enterList.add(event.target[0].value, event.target[1].value);
+  enterList.display();
 }
 function clothFormHandle(event) {
   event.preventDefault();
   console.log("I am working");
   clothList.add(event.target[0].value, event.target[1].value);
+  clothList.display();
 }
 function billFormHandle(event) {
   event.preventDefault();
   console.log("I am working");
   billList.add(event.target[0].value, event.target[1].value);
+  billList.display();
 }
 
 // !List Assisnment
