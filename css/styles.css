@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    color: white;
 }
 
 html, body {
@@ -30,15 +29,16 @@ header {
 
 a {
     text-decoration: none;
+    color: rgb(209, 205, 205);
 }
 
 .opening_card {
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 h2 {
-    font-size: 35px;
-    color: gray;
+    font-size: 30px;
+    color: rgb(209, 205, 205);
 }
 
 form {
@@ -67,28 +67,29 @@ button {
     border-radius: 5px;
     font-size: 15px;
     display: flex;
+    color: rgb(88, 85, 85);
 }
 
 /* margin left is a janky fix */
 
 .SmallCard {
     height: 20%;
-    width: 85%;
     border-radius: 10px;
     margin: 2px;
     margin-left: 30px;
     font-size: 30px;
+    color: rgb(209, 205, 205);
 }
 
 .food {
     background-color: #5BA8A0;
 }
 
-.entertainment {
+.ent {
     background-color: #CBE54E;
 }
 
-.clothing {
+.clo {
     background-color: #94B447;
 }
 
@@ -107,23 +108,44 @@ div {
 }
 
 .bigCard {
-    height: 90vh;
-    width: 100%;
+    height: 80vh;
     flex-direction: column;
     display: flex;
+    border-radius: 10px;
 }
 
 @media only screen and (min-width: 768px) {
     body {
-        background-color: white;
+        background-color: #3B5284;
+    }
+    main {
+        display: inline-grid;
+        grid-template-columns: [food] 25% [entertainment] 25% [clothes] 25% [bills] 25%;
+        grid-template-rows: [top] 20% [cards] 60% [bottom] 20%;
+        grid-row-gap: 7% 2% 2% 2% 7%;
+        justify-items: stretch;
     }
     .bigCard {
-        height: 50vh;
-        width: 20%;
-        flex-direction: row;
-        margin: none;
+        margin-top: 25%;
+        margin-bottom: 25%;
+        border-radius: 10px;
+        height: 60vh;
+        width: 80%;
     }
-    section {
-        display: flex;
+    /* not working */
+    /* .bigCard.food {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        justify-items: stretch;
+    } */
+    button {
+        height: 30px;
+        width: 50%;
+        background-color: #CBE54E;
+        border-color: #CBE54E;
+        border-radius: 5px;
+        font-size: 15px;
     }
 }
