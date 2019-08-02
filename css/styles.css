@@ -108,10 +108,12 @@ div {
 }
 
 .bigCard {
+
     height: 80vh;
     flex-direction: column;
     display: flex;
     border-radius: 10px;
+
 }
 
 @media only screen and (min-width: 768px) {
