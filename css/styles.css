@@ -33,10 +33,6 @@ a {
   color: rgb(209, 205, 205);
 }
 
-.opening_card {
-  visibility: hidden;
-}
-
 h2 {
   font-size: 30px;
   color: rgb(209, 205, 205);
@@ -81,9 +77,20 @@ button {
   font-size: 30px;
   color: rgb(209, 205, 205);
 }
+.bigCard {
+  height: 80vh;
+  flex-direction: column;
+  display: flex;
+  border-radius: 10px;
+  position: absolute;
+  visibility: hidden;
+}
+.opening_card {
+}
 
 .food {
   background-color: #5ba8a0;
+  visibility: visible;
 }
 
 .ent {
@@ -106,14 +113,6 @@ div {
   display: flex;
   align-items: center;
   padding: 10px;
-}
-
-.bigCard {
-  height: 80vh;
-  flex-direction: column;
-  display: flex;
-  border-radius: 10px;
-  position: absolute;
 }
 
 @media only screen and (min-width: 768px) {

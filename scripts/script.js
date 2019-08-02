@@ -65,10 +65,15 @@ let clothList = new List();
 let billList = new List();
 
 // !querySelector variables
+//Form Section
 let foodForm = document.querySelector("#foodForm");
 let entForm = document.querySelector("#entForm");
 let clothForm = document.querySelector("#clothForm");
 let billForm = document.querySelector("#billForm");
+
+//Card Section
+let menuCard = document.querySelector("#menuCard");
+let foodCard = document.querySelector("#foodCard");
 
 // !Event Listeners
 foodForm.addEventListener("submit", foodFormHandle);
