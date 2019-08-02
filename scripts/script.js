@@ -53,6 +53,10 @@ function billFormHandle(event) {
   display(billList.list, "#itemBill");
 }
 
+// !Visibility Functions
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 // !List Assisnment
 let budgetList = new List();
 let foodList = new List();

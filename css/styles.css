@@ -1,100 +1,101 @@
 /* !Mains/Elements */
 
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
-html, body {
-    height: 100vh;
-    width: 100vw;
+html,
+body {
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    background-color: #3B5284;
+  display: flex;
+  flex-direction: column;
+  background-color: #3b5284;
 }
 
 header {
-    height: 10vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background: #3B5284;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #3b5284;
 }
 
 a {
-    text-decoration: none;
-    color: rgb(209, 205, 205);
+  text-decoration: none;
+  color: rgb(209, 205, 205);
 }
 
 .opening_card {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 h2 {
-    font-size: 30px;
-    color: rgb(209, 205, 205);
+  font-size: 30px;
+  color: rgb(209, 205, 205);
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 90%;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90%;
+  justify-content: space-around;
+  align-items: center;
 }
 
 input {
-    justify-content: space-around;
-    width: 80%;
-    height: 30px;
-    font-size: 20px;
-    padding-left: 5px;
-    border-radius: 5px;
+  justify-content: space-around;
+  width: 80%;
+  height: 30px;
+  font-size: 20px;
+  padding-left: 5px;
+  border-radius: 5px;
 }
 
 button {
-    height: 30px;
-    width: 30%;
-    background-color: #CBE54E;
-    border-color: #CBE54E;
-    border-radius: 5px;
-    font-size: 15px;
-    display: flex;
-    color: rgb(88, 85, 85);
+  height: 30px;
+  width: 30%;
+  background-color: #cbe54e;
+  border-color: #cbe54e;
+  border-radius: 5px;
+  font-size: 15px;
+  display: flex;
+  color: rgb(88, 85, 85);
 }
 
 /* margin left is a janky fix */
 
 .SmallCard {
-    height: 20%;
-    border-radius: 10px;
-    margin: 2px;
-    margin-left: 30px;
-    font-size: 30px;
-    color: rgb(209, 205, 205);
+  height: 20%;
+  border-radius: 10px;
+  margin: 2px;
+  margin-left: 30px;
+  font-size: 30px;
+  color: rgb(209, 205, 205);
 }
 
 .food {
-    background-color: #5BA8A0;
+  background-color: #5ba8a0;
 }
 
 .ent {
-    background-color: #CBE54E;
+  background-color: #cbe54e;
 }
 
 .clo {
-    background-color: #94B447;
+  background-color: #94b447;
 }
 
 .bills {
-    background-color: #5D6E1E;
+  background-color: #5d6e1e;
 }
 
 /* main {
@@ -102,52 +103,51 @@ button {
 } */
 
 div {
-    display: flex;
-    align-items: center;
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
 
 .bigCard {
-
-    height: 80vh;
-    flex-direction: column;
-    display: flex;
-    border-radius: 10px;
-
+  height: 80vh;
+  flex-direction: column;
+  display: flex;
+  border-radius: 10px;
+  position: absolute;
 }
 
 @media only screen and (min-width: 768px) {
-    body {
-        background-color: #3B5284;
-    }
-    main {
-        display: inline-grid;
-        grid-template-columns: [food] 25% [entertainment] 25% [clothes] 25% [bills] 25%;
-        grid-template-rows: [top] 20% [cards] 60% [bottom] 20%;
-        grid-row-gap: 7% 2% 2% 2% 7%;
-        justify-items: stretch;
-    }
-    .bigCard {
-        margin-top: 25%;
-        margin-bottom: 25%;
-        border-radius: 10px;
-        height: 60vh;
-        width: 80%;
-    }
-    /* not working */
-    /* .bigCard.food {
+  body {
+    background-color: #3b5284;
+  }
+  main {
+    display: inline-grid;
+    grid-template-columns: [food] 25% [entertainment] 25% [clothes] 25% [bills] 25%;
+    grid-template-rows: [top] 20% [cards] 60% [bottom] 20%;
+    grid-row-gap: 7% 2% 2% 2% 7%;
+    justify-items: stretch;
+  }
+  .bigCard {
+    margin-top: 25%;
+    margin-bottom: 25%;
+    border-radius: 10px;
+    height: 60vh;
+    width: 80%;
+  }
+  /* not working */
+  /* .bigCard.food {
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 2;
         grid-row-end: 3;
         justify-items: stretch;
     } */
-    button {
-        height: 30px;
-        width: 50%;
-        background-color: #CBE54E;
-        border-color: #CBE54E;
-        border-radius: 5px;
-        font-size: 15px;
-    }
+  button {
+    height: 30px;
+    width: 50%;
+    background-color: #cbe54e;
+    border-color: #cbe54e;
+    border-radius: 5px;
+    font-size: 15px;
+  }
 }
