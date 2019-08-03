@@ -72,9 +72,8 @@ function onFormSubmit(event) {
 function onNavClick(event) {
   event.preventDefault();
   console.log("foodNav has been clicked");
-  if (event.currentTarget === "#foodNav") {
-    event.target.document.querySelector("#foodCard").style.visibility =
-      "visibile.";
+  if (event.target.value === "foodN") {
+    console.log("I am me");
   } else {
     console.log("TOO BAD");
   }
