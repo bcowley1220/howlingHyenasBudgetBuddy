@@ -68,21 +68,27 @@ function onFormSubmit(event) {
     display(enterList.list, "#itemEnt");
   }
 }
-
+// !This function, on click of the right target, will change the
+// !visibility of the matching card.
 function onNavClick(event) {
-  event.preventDefault();
   console.log("foodNav has been clicked");
-  if (event.target.value === "foodN") {
+
+  if (event.target.value === "foodNav") {
+    foodCard.style.visibility = "visible";
+  } else if (event.target.value === "Nav") {
     console.log("I am me");
-  } else {
-    console.log("TOO BAD");
+  } else if (event.target === "div#foodNav") {
+    console.log("I am me");
+  } else if (event.target === "div#foodNav") {
+    console.log("I am me");
   }
 }
+
 // !Visibility Functions
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-// !List Assisnment
+// !List Assignment
 let budgetList = new List();
 let foodList = new List();
 let enterList = new List();
@@ -102,7 +108,11 @@ let foodCard = document.querySelector("#foodCard");
 let entCard = document.querySelector("#entCard");
 let cloCard = document.querySelector("#cloCard");
 let billCard = document.querySelector("#billCard");
+//Nav Card Section
 let foodNav = document.querySelector("#foodNav");
+let entNav = document.querySelector("#foodNav");
+let cloNav = document.querySelector("#foodNav");
+let billNav = document.querySelector("#foodNav");
 
 // !Event Listeners
 //Form Submit Block
@@ -112,7 +122,11 @@ clothForm.addEventListener("submit", onFormSubmit);
 billForm.addEventListener("submit", onFormSubmit);
 
 //Nav Click Block
+// document.querySelector("#menuCard").addEventListener("click", onNavClick);
 foodNav.addEventListener("click", onNavClick);
+// entNav.addEventListener("click", onNavClick);
+// cloNav.addEventListener("click", onNavClick);
+// billNav.addEventListener("click", onNavClick);
 
 // !QS+EL
 // document.querySelector("#cloRet").addEventListener("click", cloRetHandle);
