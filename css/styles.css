@@ -8,145 +8,135 @@
 
 html,
 body {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 body {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background-color: #3b5284;
 }
-
+main {
+  background: #fbfbfb;
+  position: relative;
+}
 header {
-  height: 10vh;
+  height: 8vh;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  background: #3b5284;
+  background: #90fa7f;
 }
-
 a {
   text-decoration: none;
-  color: rgb(209, 205, 205);
 }
 
 h2 {
-  font-size: 30px;
-  color: rgb(209, 205, 205);
+  text-align: center;
+  margin-bottom: 15px;
+}
+button {
+  width: 75%;
+  height: 30px;
+}
+input {
+  width: 75%;
+  height: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/* !ID Area */
+#formResBut {
+  margin-top: 50px;
+  width: 50%;
 }
 
-form {
+/* !Card Classes */
+.bigCard {
+  height: 92vh;
+  width: 100%;
+  background: #ffffff;
+  position: absolute;
+  visibility: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+.infoContainer {
+  border: solid 1px black;
+  height: 350px;
+  width: 90%;
+  text-align: center;
+  font-size: 20px;
+}
+.cardForm {
+  height: 200px;
   width: 100%;
-  height: 90%;
-  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* !Opening Card */
+.opening_card {
+  background: #4a95ba;
+  color: #fbfbfb;
+  /* visibility: visible; */
   align-items: center;
 }
-
-input {
-  justify-content: space-around;
-  width: 80%;
-  height: 30px;
-  font-size: 20px;
-  padding-left: 5px;
-  border-radius: 5px;
-}
-
-button {
-  height: 30px;
-  width: 30%;
-  background-color: #cbe54e;
-  border-color: #cbe54e;
-  border-radius: 5px;
-  font-size: 15px;
+.opening_card > form {
   display: flex;
-  color: rgb(88, 85, 85);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 75%;
 }
 
-/* margin left is a janky fix */
-
+/* !Menu Card */
+.menuCard {
+  visibility: visible;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
 .SmallCard {
   height: 20%;
   border-radius: 10px;
-  margin: 2px;
-  margin-left: 30px;
   font-size: 30px;
-  color: rgb(209, 205, 205);
-}
-.bigCard {
-  height: 80vh;
-  flex-direction: column;
   display: flex;
-  border-radius: 10px;
-  position: absolute;
-  visibility: hidden;
-}
-.opening_card {
-}
-
-.food {
-  background-color: #5ba8a0;
-  visibility: visible;
-}
-
-.ent {
-  background-color: #cbe54e;
-}
-
-.clo {
-  background-color: #94b447;
-}
-
-.bills {
-  background-color: #5d6e1e;
-}
-
-/* main {
-    height: 95vh;
-} */
-
-div {
-  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
+  border: solid 1px black;
+  width: 90%;
+}
+/* !Food Card */
+.food {
+  /* visibility: visible; */
+  justify-content: space-around;
+  align-items: center;
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    background-color: #3b5284;
-  }
-  main {
-    display: inline-grid;
-    grid-template-columns: [food] 25% [entertainment] 25% [clothes] 25% [bills] 25%;
-    grid-template-rows: [top] 20% [cards] 60% [bottom] 20%;
-    grid-row-gap: 7% 2% 2% 2% 7%;
-    justify-items: stretch;
-  }
-  .bigCard {
-    margin-top: 25%;
-    margin-bottom: 25%;
-    border-radius: 10px;
-    height: 60vh;
-    width: 80%;
-  }
-  /* not working */
-  /* .bigCard.food {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        justify-items: stretch;
-    } */
-  button {
-    height: 30px;
-    width: 50%;
-    background-color: #cbe54e;
-    border-color: #cbe54e;
-    border-radius: 5px;
-    font-size: 15px;
-  }
+/* !Entertainment Card */
+.ent {
+  /* visibility: visible; */
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* !Clothing Card */
+.clo {
+  /* visibility: visible; */
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* !Bill Card */
+.bills {
+  /* visibility: visible; */
+  justify-content: space-around;
+  align-items: center;
 }
