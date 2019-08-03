@@ -58,16 +58,27 @@ function onFormSubmit(event) {
     billList.add(event.target[0].value, event.target[1].value);
     display(billList.list, "#itemBill");
   } else if (event.target[2].value === "clothing") {
-    billList.add(event.target[0].value, event.target[1].value);
-    display(billList.list, "#itemBill");
+    clothList.add(event.target[0].value, event.target[1].value);
+    display(clothList.list, "#itemCloth");
+  } else if (event.target[2].value === "food") {
+    foodList.add(event.target[0].value, event.target[1].value);
+    display(foodList.list, "#itemFood");
+  } else if (event.target[2].value === "entertainment") {
+    enterList.add(event.target[0].value, event.target[1].value);
+    display(enterList.list, "#itemEnt");
   }
 }
 
-function cloRetHandle(event) {
+function onNavClick(event) {
   event.preventDefault();
-  console.log("I am working");
+  console.log("foodNav has been clicked");
+  if (event.currentTarget === "#foodNav") {
+    event.target.document.querySelector("#foodCard").style.visibility =
+      "visibile.";
+  } else {
+    console.log("TOO BAD");
+  }
 }
-
 // !Visibility Functions
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -92,12 +103,17 @@ let foodCard = document.querySelector("#foodCard");
 let entCard = document.querySelector("#entCard");
 let cloCard = document.querySelector("#cloCard");
 let billCard = document.querySelector("#billCard");
+let foodNav = document.querySelector("#foodNav");
 
 // !Event Listeners
+//Form Submit Block
 foodForm.addEventListener("submit", onFormSubmit);
 entForm.addEventListener("submit", onFormSubmit);
 clothForm.addEventListener("submit", onFormSubmit);
 billForm.addEventListener("submit", onFormSubmit);
+
+//Nav Click Block
+foodNav.addEventListener("click", onNavClick);
 
 // !QS+EL
 // document.querySelector("#cloRet").addEventListener("click", cloRetHandle);
