@@ -22,36 +22,55 @@ function display(list, location) {
     const div = document.createElement("div");
     // div.classList.add();
     div.innerHTML = `
-      <p>Item: ${item.name}</p><p>Price: ${item.price}</p>
+      <p> ${item.name} $${item.price}</p>
       `;
     document.querySelector(location).append(div);
   }
 }
 // !Handling Functions
-function foodFormHandle(event) {
+// function foodFormHandle(event) {
+//   event.preventDefault();
+//   console.log("I am working");
+//   foodList.add(event.target[0].value, event.target[1].value);
+//   display(foodList.list, "#itemFood");
+// }
+// function entFormHandle(event) {
+//   event.preventDefault();
+//   console.log("I am working");
+//   enterList.add(event.target[0].value, event.target[1].value);
+//   display(enterList.list, "#itemEnt");
+// }
+// function clothFormHandle(event) {
+//   event.preventDefault();
+//   console.log("I am working");
+//   clothList.add(event.target[0].value, event.target[1].value);
+//   display(clothList.list, "#itemCloth");
+// }
+// function billFormHandle(event) {
+//   event.preventDefault();
+//   console.log("I am working");
+//   billList.add(event.target[0].value, event.target[1].value);
+//   display(billList.list, "#itemBill");
+// }
+function onFormSubmit(event) {
+  event.preventDefault();
+  if (event.target[2].value === "bill") {
+    billList.add(event.target[0].value, event.target[1].value);
+    display(billList.list, "#itemBill");
+  } else if (event.target[2].value === "clothing") {
+    billList.add(event.target[0].value, event.target[1].value);
+    display(billList.list, "#itemBill");
+  }
+}
+
+function cloRetHandle(event) {
   event.preventDefault();
   console.log("I am working");
-  foodList.add(event.target[0].value, event.target[1].value);
-  display(foodList.list, "#itemFood");
 }
-function entFormHandle(event) {
-  event.preventDefault();
-  console.log("I am working");
-  enterList.add(event.target[0].value, event.target[1].value);
-  display(enterList.list, "#itemEnt");
-}
-function clothFormHandle(event) {
-  event.preventDefault();
-  console.log("I am working");
-  clothList.add(event.target[0].value, event.target[1].value);
-  display(clothList.list, "#itemCloth");
-}
-function billFormHandle(event) {
-  event.preventDefault();
-  console.log("I am working");
-  billList.add(event.target[0].value, event.target[1].value);
-  display(billList.list, "#itemBill");
-}
+
+// !Visibility Functions
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // !List Assisnment
 let budgetList = new List();
@@ -61,16 +80,32 @@ let clothList = new List();
 let billList = new List();
 
 // !querySelector variables
+//Form Section
 let foodForm = document.querySelector("#foodForm");
 let entForm = document.querySelector("#entForm");
 let clothForm = document.querySelector("#clothForm");
 let billForm = document.querySelector("#billForm");
 
+//Card Section
+let menuCard = document.querySelector("#menuCard");
+let foodCard = document.querySelector("#foodCard");
+let entCard = document.querySelector("#entCard");
+let cloCard = document.querySelector("#cloCard");
+let billCard = document.querySelector("#billCard");
+
 // !Event Listeners
-foodForm.addEventListener("submit", foodFormHandle);
-entForm.addEventListener("submit", entFormHandle);
-clothForm.addEventListener("submit", clothFormHandle);
-billForm.addEventListener("submit", billFormHandle);
+foodForm.addEventListener("submit", onFormSubmit);
+entForm.addEventListener("submit", onFormSubmit);
+clothForm.addEventListener("submit", onFormSubmit);
+billForm.addEventListener("submit", onFormSubmit);
+
+// !QS+EL
+// document.querySelector("#cloRet").addEventListener("click", cloRetHandle);
+// document.querySelector("#cloRet").addEventListener("click", cloRetHandle);
+// document.querySelector("#cloRet").addEventListener("click", cloRetHandle);
+// document.querySelector("#cloRet").addEventListener("click", cloRetHandle);
+// document.querySelector("#cloRet").addEventListener("click", cloRetHandle);
+// document.querySelector("#cloRet").addEventListener("click", cloRetHandle);
 
 // function revealPurple(event){
 //   console.log('I have been clicked.')
