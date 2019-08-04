@@ -41,11 +41,11 @@ function display(list, location) {
     document.querySelector(location).append(div);
   }
 }
-function showTotals(location) {
+function showTotals(location, item) {
   document.querySelector(location).innerHTML = "";
   const div = document.createElement("div");
   div.innerHTML = `
-<p>Totat Budget: $${budgetList.list[0].total}</p>`;
+<p>Budget: $${item}</p>`;
   document.querySelector(location).append(div);
 }
 
@@ -74,7 +74,11 @@ function onFormSubmit(event) {
       event.target[3].value
     );
     console.log(budgetList);
-    showTotals("#totalBudget");
+    showTotals("#totalBudget", budgetList.list[0].total);
+    showTotals("#foodBudget", budgetList.list[0].food);
+    showTotals("#entBudget", budgetList.list[0].entertainment);
+    showTotals("#clothingBudget", budgetList.list[0].clothing);
+    showTotals("#billBudget", budgetList.list[0].bill);
   }
 }
 // !This function, on click of the right target, will change the
