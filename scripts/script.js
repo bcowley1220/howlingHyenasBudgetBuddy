@@ -141,3 +141,9 @@ billNav.addEventListener("click", onNavClick);
 menuNav.addEventListener("click", onNavClick);
 
 // budgetFormCard.addEventListener("click", onNavClick);
+
+// TODO
+// !Fix the nav function when you hit submit on main form it takes to menu
+// !If time, reset the array every time that we submit a new budget
+// !Blow up the font on the display boxes for each budget to fill space or shrink box
+// !Add logo to top
