@@ -18,7 +18,7 @@
       <!-- <i class="fas fa-frog"></i> -->
       <div class="logo">logo</div>
       <!-- !Total$ Container -->
-      <div class="total">$</div>
+      <div class="total" id="totalBudget"></div>
       <!-- !Nav -->
       <button value="menuButton" class="menuButton" id="menuNav">Menu</button>
     </header>
@@ -26,7 +26,7 @@
       <!-- !Initial Form Card  -->
       <section class="bigCard opening_card" id="budgetFormCard">
         <h2>Set Your Weekly Budget</h2>
-        <form class="cardForm">
+        <form class="cardForm" id="cardForm">
           <label for="">Groceries & Meals</label>
           <input type="number" placeholder="Enter budget here" />
           <label for="">Entertainment</label>
@@ -35,8 +35,8 @@
           <input type="number" placeholder="Enter budget here" />
           <label for="">Bills & Stuff</label>
           <input type="number" placeholder="Enter budget here" />
-          <button type="submit">Set Budget</button>
-          <button id="formResBut">Reset Budget</button>
+          <button value="budget" type="submit">Set Budget</button>
+          <!-- <button id="formResBut">Reset Budget</button> -->
         </form>
       </section>
 

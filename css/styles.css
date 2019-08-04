@@ -88,7 +88,7 @@ input {
 .opening_card {
   background: #4a95ba;
   color: #fbfbfb;
-  /* visibility: visible; */
+  visibility: visible;
   align-items: center;
 }
 .opening_card > form {
@@ -102,7 +102,7 @@ input {
 
 /* !Menu Card */
 .menuCard {
-  visibility: visible;
+  /* visibility: visible; */
   text-align: center;
   display: flex;
   align-items: center;
