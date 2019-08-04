@@ -41,6 +41,14 @@ function display(list, location) {
     document.querySelector(location).append(div);
   }
 }
+function showTotals(location) {
+  document.querySelector(location).innerHTML = "";
+  const div = document.createElement("div");
+  div.innerHTML = `
+<p>Totat Budget: $${budgetList.list[0].total}</p>`;
+  document.querySelector(location).append(div);
+}
+
 // !Handling Functions
 
 function onFormSubmit(event) {
@@ -66,7 +74,7 @@ function onFormSubmit(event) {
       event.target[3].value
     );
     console.log(budgetList);
-    // display(budgetList.total, "#totalBudget");
+    showTotals("#totalBudget");
   }
 }
 // !This function, on click of the right target, will change the
@@ -141,3 +149,9 @@ billNav.addEventListener("click", onNavClick);
 menuNav.addEventListener("click", onNavClick);
 
 // budgetFormCard.addEventListener("click", onNavClick);
+
+// TODO
+// !Fix the nav function when you hit submit on main form it takes to menu
+// !If time, reset the array every time that we submit a new budget
+// !Blow up the font on the display boxes for each budget to fill space or shrink box
+// !Add logo to top
