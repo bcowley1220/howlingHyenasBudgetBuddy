@@ -28,30 +28,7 @@ function display(list, location) {
   }
 }
 // !Handling Functions
-// function foodFormHandle(event) {
-//   event.preventDefault();
-//   console.log("I am working");
-//   foodList.add(event.target[0].value, event.target[1].value);
-//   display(foodList.list, "#itemFood");
-// }
-// function entFormHandle(event) {
-//   event.preventDefault();
-//   console.log("I am working");
-//   enterList.add(event.target[0].value, event.target[1].value);
-//   display(enterList.list, "#itemEnt");
-// }
-// function clothFormHandle(event) {
-//   event.preventDefault();
-//   console.log("I am working");
-//   clothList.add(event.target[0].value, event.target[1].value);
-//   display(clothList.list, "#itemCloth");
-// }
-// function billFormHandle(event) {
-//   event.preventDefault();
-//   console.log("I am working");
-//   billList.add(event.target[0].value, event.target[1].value);
-//   display(billList.list, "#itemBill");
-// }
+
 function onFormSubmit(event) {
   event.preventDefault();
   if (event.target[2].value === "bill") {
@@ -66,6 +43,15 @@ function onFormSubmit(event) {
   } else if (event.target[2].value === "entertainment") {
     enterList.add(event.target[0].value, event.target[1].value);
     display(enterList.list, "#itemEnt");
+  } else if (event.target[4].value === "budget") {
+    console.log("I am cardForm");
+    budgetList.add(
+      event.target[0].value,
+      event.target[1].value,
+      event.target[2].value,
+      event.target[3].value
+    );
+    display(budgetList.list, "#totalBudget");
   }
 }
 // !This function, on click of the right target, will change the
@@ -82,9 +68,7 @@ function onNavClick(event) {
   } else if (event.target.value === "billNav") {
     billCard.style.visibility = "visible";
   } else if (event.target.value === "menuButton") {
-    console.log("menu button has been pressed.");
     let allCards = document.querySelectorAll(".bigCard");
-    console.log(allCards);
     for (let i = 0; i < allCards.length; i++) {
       allCards[i].style.visibility = "hidden";
     }
@@ -97,7 +81,7 @@ function onNavClick(event) {
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // !List Assignment
-let budgetList = new List();
+let budgetList = [];
 let foodList = new List();
 let enterList = new List();
 let clothList = new List();
@@ -109,6 +93,7 @@ let foodForm = document.querySelector("#foodForm");
 let entForm = document.querySelector("#entForm");
 let clothForm = document.querySelector("#clothForm");
 let billForm = document.querySelector("#billForm");
+let cardForm = document.querySelector("#cardForm");
 
 //Card Section
 let menuCard = document.querySelector("#menuCard");
@@ -130,6 +115,7 @@ foodForm.addEventListener("submit", onFormSubmit);
 entForm.addEventListener("submit", onFormSubmit);
 clothForm.addEventListener("submit", onFormSubmit);
 billForm.addEventListener("submit", onFormSubmit);
+cardForm.addEventListener("submit", onFormSubmit);
 
 //Nav Click Block
 // document.querySelector("#menuCard").addEventListener("click", onNavClick);
@@ -138,4 +124,5 @@ entNav.addEventListener("click", onNavClick);
 cloNav.addEventListener("click", onNavClick);
 billNav.addEventListener("click", onNavClick);
 menuNav.addEventListener("click", onNavClick);
+
 // budgetFormCard.addEventListener("click", onNavClick);
