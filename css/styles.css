@@ -146,5 +146,10 @@ input {
   align-items: center;
 }
 
+/* !This class is placed down here so it doesn't get overruled */
+.menuButton {
+  width: 25%;
+}
+
 @media only screen and (min-width: 768px) {
 }

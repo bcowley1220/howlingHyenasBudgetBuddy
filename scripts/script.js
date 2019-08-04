@@ -71,16 +71,24 @@ function onFormSubmit(event) {
 // !This function, on click of the right target, will change the
 // !visibility of the matching card.
 function onNavClick(event) {
-  console.log("foodNav has been clicked");
-
-  if (event.target.value === "foodNav") {
+  event.preventDefault();
+  console.log("nav button has been clicked");
+  if (event.currentTarget.value === "foodNav") {
     foodCard.style.visibility = "visible";
-  } else if (event.target.value === "Nav") {
-    console.log("I am me");
-  } else if (event.target === "div#foodNav") {
-    console.log("I am me");
-  } else if (event.target === "div#foodNav") {
-    console.log("I am me");
+  } else if (event.currentTarget.value === "entNav") {
+    entCard.style.visibility = "visible";
+  } else if (event.target.value === "cloNav") {
+    cloCard.style.visibility = "visible";
+  } else if (event.target.value === "billNav") {
+    billCard.style.visibility = "visible";
+  } else if (event.target.value === "menuButton") {
+    console.log("menu button has been pressed.");
+    let allCards = document.querySelectorAll(".bigCard");
+    console.log(allCards);
+    for (let i = 0; i < allCards.length; i++) {
+      allCards[i].style.visibility = "hidden";
+    }
+    menuCard.style.visibility = "visible";
   }
 }
 
@@ -108,11 +116,13 @@ let foodCard = document.querySelector("#foodCard");
 let entCard = document.querySelector("#entCard");
 let cloCard = document.querySelector("#cloCard");
 let billCard = document.querySelector("#billCard");
+let budgetFormCard = document.querySelector("#budgetFormCard");
 //Nav Card Section
+let menuNav = document.querySelector("#menuNav");
 let foodNav = document.querySelector("#foodNav");
-let entNav = document.querySelector("#foodNav");
-let cloNav = document.querySelector("#foodNav");
-let billNav = document.querySelector("#foodNav");
+let entNav = document.querySelector("#entNav");
+let cloNav = document.querySelector("#cloNav");
+let billNav = document.querySelector("#billNav");
 
 // !Event Listeners
 //Form Submit Block
@@ -124,30 +134,8 @@ billForm.addEventListener("submit", onFormSubmit);
 //Nav Click Block
 // document.querySelector("#menuCard").addEventListener("click", onNavClick);
 foodNav.addEventListener("click", onNavClick);
-// entNav.addEventListener("click", onNavClick);
-// cloNav.addEventListener("click", onNavClick);
-// billNav.addEventListener("click", onNavClick);
-
-// !QS+EL
-// document.querySelector("#cloRet").addEventListener("click", cloRetHandle);
-// document.querySelector("#cloRet").addEventListener("click", cloRetHandle);
-// document.querySelector("#cloRet").addEventListener("click", cloRetHandle);
-// document.querySelector("#cloRet").addEventListener("click", cloRetHandle);
-// document.querySelector("#cloRet").addEventListener("click", cloRetHandle);
-// document.querySelector("#cloRet").addEventListener("click", cloRetHandle);
-
-// function revealPurple(event){
-//   console.log('I have been clicked.')
-//   purple.style.visibility = "visible";
-// }
-
-// function hidePurple(event){
-//   console.log('I have been click purple');
-//   purple.style.visibility = "hidden";
-// }
-
-// let purple = document.getElementById('purple');
-// let but1 = document.querySelector('.button1');
-
-// button1.addEventListener('click', revealPurple);
-// purple.addEventListener('click', hidePurple);
+entNav.addEventListener("click", onNavClick);
+cloNav.addEventListener("click", onNavClick);
+billNav.addEventListener("click", onNavClick);
+menuNav.addEventListener("click", onNavClick);
+// budgetFormCard.addEventListener("click", onNavClick);

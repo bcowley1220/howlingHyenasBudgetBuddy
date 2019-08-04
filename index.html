@@ -20,11 +20,11 @@
       <!-- !Total$ Container -->
       <div class="total">$</div>
       <!-- !Nav -->
-      <div class="contact_us">Menu</div>
+      <button value="menuButton" class="menuButton" id="menuNav">Menu</button>
     </header>
     <main id="mainNav">
       <!-- !Initial Form Card  -->
-      <section class="bigCard opening_card">
+      <section class="bigCard opening_card" id="budgetFormCard">
         <h2>Set Your Weekly Budget</h2>
         <form class="cardForm">
           <label for="">Groceries & Meals</label>
@@ -44,18 +44,18 @@
       <section class="bigCard menuCard" id="menuCard">
         <h2>Budget Menu</h2>
         <p>Click a card below for specific budget</p>
-        <button value="foodNav" class="food SmallCard" id="foodNav">
+        <button class=" SmallCard" value="foodNav" id="foodNav">
           Food Budget
         </button>
-        <div class="ent SmallCard">
-          <div>Entertainment Budget</div>
-        </div>
-        <div class="clo SmallCard">
-          <div>Clothing Budget</div>
-        </div>
-        <div class="bills SmallCard">
-          <p>Bill Budget</p>
-        </div>
+        <button class=" SmallCard" value="entNav" id="entNav">
+          Entertainment Budget
+        </button>
+        <button class=" SmallCard" value="cloNav" id="cloNav">
+          Clothing Budget
+        </button>
+        <button class=" SmallCard" value="billNav" id="billNav">
+          Bill Budget
+        </button>
       </section>
       <!-- !Food Section -->
       <section id="foodCard" class="bigCard food">
