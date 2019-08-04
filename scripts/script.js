@@ -7,12 +7,26 @@ class List {
     let newItem = new Item(name, price);
     this.list.push(newItem);
   }
+  totalAdd(food, entertainment, clothing, bill) {
+    let newTotalItem = new FourItem(food, entertainment, clothing, bill);
+    this.list.push(newTotalItem);
+  }
 }
 
 class Item {
   constructor(name, price) {
     this.name = name;
     this.price = price;
+  }
+}
+
+class FourItem {
+  constructor(food, entertainment, clothing, bill) {
+    this.food = Number(food);
+    this.entertainment = Number(entertainment);
+    this.clothing = Number(clothing);
+    this.bill = Number(bill);
+    this.total = this.food + this.entertainment + this.clothing + this.bill;
   }
 }
 
@@ -45,13 +59,14 @@ function onFormSubmit(event) {
     display(enterList.list, "#itemEnt");
   } else if (event.target[4].value === "budget") {
     console.log("I am cardForm");
-    budgetList.add(
+    budgetList.totalAdd(
       event.target[0].value,
       event.target[1].value,
       event.target[2].value,
       event.target[3].value
     );
-    display(budgetList.list, "#totalBudget");
+    console.log(budgetList);
+    // display(budgetList.total, "#totalBudget");
   }
 }
 // !This function, on click of the right target, will change the
@@ -81,7 +96,7 @@ function onNavClick(event) {
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // !List Assignment
-let budgetList = [];
+let budgetList = new List();
 let foodList = new List();
 let enterList = new List();
 let clothList = new List();
