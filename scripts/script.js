@@ -16,7 +16,7 @@ class List {
 class Item {
   constructor(name, price) {
     this.name = name;
-    this.price = price;
+    this.price = Number(price);
   }
 }
 
@@ -36,16 +36,35 @@ function onFormSubmit(event) {
   event.preventDefault();
   if (event.target[2].value === "bill") {
     billList.add(event.target[0].value, event.target[1].value);
+    budgetList.list[0].bill = budgetList.list[0].bill - event.target[1].value;
+    budgetList.list[0].total = budgetList.list[0].total - event.target[1].value;
+    showTotals("#billBudget", budgetList.list[0].bill);
+    showTotals("#totalBudget", budgetList.list[0].total);
     display(billList.list, "#itemBill");
   } else if (event.target[2].value === "clothing") {
     clothList.add(event.target[0].value, event.target[1].value);
+    budgetList.list[0].clothing =
+      budgetList.list[0].clothing - event.target[1].value;
+    budgetList.list[0].total = budgetList.list[0].total - event.target[1].value;
+    showTotals("#totalBudget", budgetList.list[0].total);
+    showTotals("#clothingBudget", budgetList.list[0].clothing);
     display(clothList.list, "#itemCloth");
   } else if (event.target[2].value === "food") {
     foodList.add(event.target[0].value, event.target[1].value);
+    budgetList.list[0].food = budgetList.list[0].food - event.target[1].value;
+    budgetList.list[0].total = budgetList.list[0].total - event.target[1].value;
+    showTotals("#totalBudget", budgetList.list[0].total);
+    showTotals("#foodBudget", budgetList.list[0].food);
     display(foodList.list, "#itemFood");
   } else if (event.target[2].value === "entertainment") {
     enterList.add(event.target[0].value, event.target[1].value);
+    budgetList.list[0].entertainment =
+      budgetList.list[0].entertainment - event.target[1].value;
+    budgetList.list[0].total = budgetList.list[0].total - event.target[1].value;
+    showTotals("#totalBudget", budgetList.list[0].total);
+    showTotals("#entBudget", budgetList.list[0].entertainment);
     display(enterList.list, "#itemEnt");
+    showTotals("#totalBudget", budgetList.list[0].total);
   } else if (event.target[4].value === "budget") {
     console.log("I am cardForm");
     budgetList.totalAdd(
@@ -62,6 +81,18 @@ function onFormSubmit(event) {
     showTotals("#billBudget", budgetList.list[0].bill);
   }
 }
+
+function updateTotal(listPosition, pLocation) {
+  for (let item = 0; item < list.length; item++) {
+    let price = document.querySelector(pLocation); // current price location
+    let total = document.querySelector(listPosition); //original price value from first card
+  }
+}
+//     //increment through supplied list
+//     //we want to find
+//   }
+// }
+
 // !This function, on click of the right target, will change the
 // !visibility of the matching card.
 function onNavClick(event) {
@@ -91,7 +122,7 @@ function display(list, location) {
     const div = document.createElement("div");
     // div.classList.add();
     div.innerHTML = `
-      <p> ${item.name} $${item.price}</p>
+      <p> ${item.name}</p> <p id="priceCall">${item.price}</p>
       `;
     document.querySelector(location).append(div);
   }
@@ -134,6 +165,7 @@ let foodNav = document.querySelector("#foodNav");
 let entNav = document.querySelector("#entNav");
 let cloNav = document.querySelector("#cloNav");
 let billNav = document.querySelector("#billNav");
+//RandomSelector
 
 // !Event Listeners
 //Form Submit Block
@@ -168,3 +200,12 @@ menuNav.addEventListener("click", onNavClick);
 // CSS
 // !Blow up the font on the display boxes for each budget to fill space or shrink box
 // !Add logo to top
+
+// TODO/WhatWeKnow For Math Function
+// !All totals are String; we need them as numbers to be able to do functions
+// !We are uncertain if we are accessing the information properly
+// !document.querySelector("#priceCall").firstChild.nodeValue; actually gives us the value
+// !Make new instance from List class and hold info from first form in it; holding it as integers instead of strings.
+// !Could make new variable that holds the value of budgetList, but as ints instead of strings
+// !When pull the prices out of the Array, we need to convert from string to int.
+// ! console.log(parseInt(document.querySelector("#priceCall").firstChild.nodeValue)); returned an int
