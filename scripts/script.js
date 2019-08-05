@@ -80,6 +80,13 @@ function onFormSubmit(event) {
     showTotals("#clothingBudget", budgetList.list[0].clothing);
     showTotals("#billBudget", budgetList.list[0].bill);
   }
+  alertUser();
+}
+
+function alertUser() {
+  if (budgetList.list[0].total <= 0) {
+    alert("You have reached your budget!");
+  }
 }
 
 function updateTotal(listPosition, pLocation) {
