@@ -129,7 +129,7 @@ function display(list, location) {
     const div = document.createElement("div");
     // div.classList.add();
     div.innerHTML = `
-      <p> ${item.name}</p> <p id="priceCall">${item.price}</p>
+      <p> ${item.name}</p> <p id="priceCall">$${item.price}</p>
       `;
     document.querySelector(location).append(div);
   }
