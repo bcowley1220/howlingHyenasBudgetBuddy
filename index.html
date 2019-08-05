@@ -1,119 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/28a5d5a142.js"></script>
     <title>Greenback</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
-      <!-- !logo container -->
-      <!-- <i class="fas fa-frog"></i> -->
-      <div class="logo">logo</div>
-      <!-- !Total$ Container -->
-      <div class="total" id="totalBudget"></div>
-      <!-- !Nav -->
-      <button value="menuButton" class="menuButton" id="menuNav">Menu</button>
+        <!-- !logo container -->
+        <div class="logo"><i class="fas fa-frog"></i></div>
+        <!-- !Total$ Container -->
+        <div class="total" id="totalBudget"></div>
+        <!-- !Nav -->
+        <button value="menuButton" class="menuButton" id="menuNav">Menu</button>
     </header>
     <main id="mainNav">
-      <!-- !Initial Form Card  -->
-      <section class="bigCard opening_card" id="budgetFormCard">
-        <h2>Set Your Weekly Budget</h2>
-        <form class="cardForm" id="cardForm">
-          <label for="">Groceries & Meals</label>
-          <input type="number" placeholder="Enter budget here" />
-          <label for="">Entertainment</label>
-          <input type="number" placeholder="Enter budget here" />
-          <label for="">Clothing</label>
-          <input type="number" placeholder="Enter budget here" />
-          <label for="">Bills & Stuff</label>
-          <input type="number" placeholder="Enter budget here" />
-          <button value="budget" type="submit">Set Budget</button>
-          <!-- <button id="formResBut">Reset Budget</button> -->
-        </form>
-      </section>
+        <!-- !Initial Form Card  -->
+        <section class="bigCard opening_card" id="budgetFormCard">
+            <h2>Set Your Weekly Budget</h2>
+            <form class="cardForm" id="cardForm">
+                <label for="">Groceries & Meals</label>
+                <input type="number" placeholder="Enter budget here" />
+                <label for="">Entertainment</label>
+                <input type="number" placeholder="Enter budget here" />
+                <label for="">Clothing</label>
+                <input type="number" placeholder="Enter budget here" />
+                <label for="">Bills & Stuff</label>
+                <input type="number" placeholder="Enter budget here" />
+                <button value="budget" type="submit">Set Budget</button>
+                <!-- <button id="formResBut">Reset Budget</button> -->
+            </form>
+        </section>
 
-      <!-- !Nav Card -->
-      <section class="bigCard menuCard" id="menuCard">
-        <h2>Budget Menu</h2>
-        <p>Click a card below for specific budget</p>
-        <button class=" SmallCard" value="foodNav" id="foodNav">
-          Food Budget
-        </button>
-        <button class=" SmallCard" value="entNav" id="entNav">
-          Entertainment Budget
-        </button>
-        <button class=" SmallCard" value="cloNav" id="cloNav">
-          Clothing Budget
-        </button>
-        <button class=" SmallCard" value="billNav" id="billNav">
-          Bill Budget
-        </button>
-      </section>
-      <!-- !Food Section -->
-      <section id="foodCard" class="bigCard food">
-        <h2>Food Budget</h2>
-        <div id="foodBudget"></div>
-        <form class="cardForm" id="foodForm">
-          <label for=""></label>
-          <input type="text" placeholder="Item" />
-          <label for=""></label>
-          <input type="number" placeholder="$ Amount" />
-          <button value="food" type="submit">Submit Item</button>
-        </form>
-        <div id="itemFood" class="infoContainer"></div>
-      </section>
-      <!-- !Entertainment Section -->
-      <section id="entCard" class="bigCard ent">
-        <h2>Entertainment</h2>
-        <div id="entBudget"></div>
-        <form class="cardForm" id="entForm">
-          <label for=""></label>
-          <input type="text" placeholder="Item" />
-          <label for=""></label>
-          <input type="number" placeholder="$ Amount" />
-          <button type="submit" value="entertainment">Submit</button>
-        </form>
-        <p id="itemEnt" class="infoContainer"></p>
-      </section>
-      <!-- !Clothing Section -->
-      <section id="cloCard" class="bigCard clo">
-        <h2>Clothing</h2>
-        <div id="clothingBudget"></div>
-        <form id="clothForm" class="cardForm">
-          <label for=""></label>
-          <input type="text" placeholder="Item" />
-          <label for=""></label>
-          <input type="number" placeholder="$ Amount" />
-          <button value="clothing" class="submit" type="submit">
-            Submit
-          </button>
-          <!-- <button type="submit" id="cloRet">Return or Reset</button> -->
-        </form>
-        <div id="itemCloth" class="infoContainer"></div>
-      </section>
-      <!-- !Bills Section -->
-      <section id="billCard" class="bills bigCard">
-        <h2>Bills</h2>
-        <div id="billBudget"></div>
-        <form id="billForm" class="cardForm">
-          <label for=""></label>
-          <input type="text" placeholder="Item" />
-          <label for=""></label>
-          <input type="number" placeholder="$ Amount" />
-          <button value="bill" class="submit" type="submit">Submit</button>
-          <!-- <button type="submit">Return or Reset</button> -->
-        </form>
-        <div id="itemBill" class="infoContainer"></div>
-      </section>
+        <!-- !Nav Card -->
+        <section class="bigCard menuCard" id="menuCard">
+            <h2>Budget Menu</h2>
+            <p>Click a card below for specific budget</p>
+            <button class=" SmallCard" value="foodNav" id="foodNav">
+                Food Budget
+            </button>
+            <button class=" SmallCard" value="entNav" id="entNav">
+                Entertainment Budget
+            </button>
+            <button class=" SmallCard" value="cloNav" id="cloNav">
+                Clothing Budget
+            </button>
+            <button class=" SmallCard" value="billNav" id="billNav">
+                Bill Budget
+            </button>
+        </section>
+        <!-- !Food Section -->
+        <section id="foodCard" class="bigCard food">
+            <h2>Food Budget</h2>
+            <div id="foodBudget"></div>
+            <form class="cardForm" id="foodForm">
+                <label for=""></label>
+                <input type="text" placeholder="Item" />
+                <label for=""></label>
+                <input type="number" placeholder="$ Amount" />
+                <button value="food" type="submit">Submit Item</button>
+            </form>
+            <div id="itemFood" class="infoContainer"></div>
+        </section>
+        <!-- !Entertainment Section -->
+        <section id="entCard" class="bigCard ent">
+            <h2>Entertainment</h2>
+            <div id="entBudget"></div>
+            <form class="cardForm" id="entForm">
+                <label for=""></label>
+                <input type="text" placeholder="Item" />
+                <label for=""></label>
+                <input type="number" placeholder="$ Amount" />
+                <button type="submit" value="entertainment">Submit</button>
+            </form>
+            <p id="itemEnt" class="infoContainer"></p>
+        </section>
+        <!-- !Clothing Section -->
+        <section id="cloCard" class="bigCard clo">
+            <h2>Clothing</h2>
+            <div id="clothingBudget"></div>
+            <form id="clothForm" class="cardForm">
+                <label for=""></label>
+                <input type="text" placeholder="Item" />
+                <label for=""></label>
+                <input type="number" placeholder="$ Amount" />
+                <button value="clothing" class="submit" type="submit">
+                    Submit
+                </button>
+                <!-- <button type="submit" id="cloRet">Return or Reset</button> -->
+            </form>
+            <div id="itemCloth" class="infoContainer"></div>
+        </section>
+        <!-- !Bills Section -->
+        <section id="billCard" class="bills bigCard">
+            <h2>Bills</h2>
+            <div id="billBudget"></div>
+            <form id="billForm" class="cardForm">
+                <label for=""></label>
+                <input type="text" placeholder="Item" />
+                <label for=""></label>
+                <input type="number" placeholder="$ Amount" />
+                <button value="bill" class="submit" type="submit">Submit</button>
+                <!-- <button type="submit">Return or Reset</button> -->
+            </form>
+            <div id="itemBill" class="infoContainer"></div>
+        </section>
     </main>
     <script src="scripts/script.js"></script>
-  </body>
+</body>
+
 </html>

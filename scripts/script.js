@@ -1,106 +1,119 @@
 // !Class Section
 class List {
-  constructor() {
-    this.list = [];
-  }
-  add(name, price) {
-    let newItem = new Item(name, price);
-    this.list.push(newItem);
-  }
-  totalAdd(food, entertainment, clothing, bill) {
-    let newTotalItem = new FourItem(food, entertainment, clothing, bill);
-    this.list.push(newTotalItem);
-  }
+    constructor() {
+        this.list = [];
+    }
+    add(name, price) {
+        let newItem = new Item(name, price);
+        this.list.push(newItem);
+    }
+    totalAdd(food, entertainment, clothing, bill) {
+        let newTotalItem = new FourItem(food, entertainment, clothing, bill);
+        this.list.push(newTotalItem);
+    }
 }
 
 class Item {
-  constructor(name, price) {
-    this.name = name;
-    this.price = price;
-  }
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
 }
 
 class FourItem {
-  constructor(food, entertainment, clothing, bill) {
-    this.food = Number(food);
-    this.entertainment = Number(entertainment);
-    this.clothing = Number(clothing);
-    this.bill = Number(bill);
-    this.total = this.food + this.entertainment + this.clothing + this.bill;
-  }
+    constructor(food, entertainment, clothing, bill) {
+        this.food = Number(food);
+        this.entertainment = Number(entertainment);
+        this.clothing = Number(clothing);
+        this.bill = Number(bill);
+        this.total = this.food + this.entertainment + this.clothing + this.bill;
+    }
 }
 
 function display(list, location) {
-  document.querySelector(location).innerHTML = "";
-  for (let item of list) {
-    const div = document.createElement("div");
-    // div.classList.add();
-    div.innerHTML = `
+    document.querySelector(location).innerHTML = "";
+    for (let item of list) {
+        const div = document.createElement("div");
+        // div.classList.add();
+        div.innerHTML = `
       <p> ${item.name} $${item.price}</p>
       `;
-    document.querySelector(location).append(div);
-  }
+        document.querySelector(location).append(div);
+    }
 }
 function showTotals(location, item) {
-  document.querySelector(location).innerHTML = "";
-  const div = document.createElement("div");
-  div.innerHTML = `
+    document.querySelector(location).innerHTML = "";
+    const div = document.createElement("div");
+    div.innerHTML = `
 <p>Budget: $${item}</p>`;
-  document.querySelector(location).append(div);
+    document.querySelector(location).append(div);
 }
 
 // !Handling Functions
 
 function onFormSubmit(event) {
-  event.preventDefault();
-  if (event.target[2].value === "bill") {
-    billList.add(event.target[0].value, event.target[1].value);
-    display(billList.list, "#itemBill");
-  } else if (event.target[2].value === "clothing") {
-    clothList.add(event.target[0].value, event.target[1].value);
-    display(clothList.list, "#itemCloth");
-  } else if (event.target[2].value === "food") {
-    foodList.add(event.target[0].value, event.target[1].value);
-    display(foodList.list, "#itemFood");
-  } else if (event.target[2].value === "entertainment") {
-    enterList.add(event.target[0].value, event.target[1].value);
-    display(enterList.list, "#itemEnt");
-  } else if (event.target[4].value === "budget") {
-    console.log("I am cardForm");
-    budgetList.totalAdd(
-      event.target[0].value,
-      event.target[1].value,
-      event.target[2].value,
-      event.target[3].value
-    );
-    console.log(budgetList);
-    showTotals("#totalBudget", budgetList.list[0].total);
-    showTotals("#foodBudget", budgetList.list[0].food);
-    showTotals("#entBudget", budgetList.list[0].entertainment);
-    showTotals("#clothingBudget", budgetList.list[0].clothing);
-    showTotals("#billBudget", budgetList.list[0].bill);
-  }
+    event.preventDefault();
+    if (event.target[2].value === "bill") {
+        billList.add(event.target[0].value, event.target[1].value);
+        display(billList.list, "#itemBill");
+    } else if (event.target[2].value === "clothing") {
+        clothList.add(event.target[0].value, event.target[1].value);
+        display(clothList.list, "#itemCloth");
+    } else if (event.target[2].value === "food") {
+        foodList.add(event.target[0].value, event.target[1].value);
+        display(foodList.list, "#itemFood");
+    } else if (event.target[2].value === "entertainment") {
+        enterList.add(event.target[0].value, event.target[1].value);
+        display(enterList.list, "#itemEnt");
+    } else if (event.target[4].value === "budget") {
+        console.log("I am cardForm");
+        budgetList.totalAdd(
+            event.target[0].value,
+            event.target[1].value,
+            event.target[2].value,
+            event.target[3].value
+        );
+
+
+
+
+
+
+        // alert when budget reaches 0 - needs variable replacement
+        // let replaceMeWithBudgetBalance = 0;
+
+        // if (replaceMeWithBudgetBalance <= 0) {
+        //             alert("You have reached your budget!");
+        //         }
+
+        console.log(budgetList);
+        showTotals("#totalBudget", budgetList.list[0].total);
+        showTotals("#foodBudget", budgetList.list[0].food);
+        showTotals("#entBudget", budgetList.list[0].entertainment);
+        showTotals("#clothingBudget", budgetList.list[0].clothing);
+        showTotals("#billBudget", budgetList.list[0].bill);
+    }
 }
 // !This function, on click of the right target, will change the
 // !visibility of the matching card.
 function onNavClick(event) {
-  event.preventDefault();
-  console.log("nav button has been clicked");
-  if (event.currentTarget.value === "foodNav") {
-    foodCard.style.visibility = "visible";
-  } else if (event.currentTarget.value === "entNav") {
-    entCard.style.visibility = "visible";
-  } else if (event.target.value === "cloNav") {
-    cloCard.style.visibility = "visible";
-  } else if (event.target.value === "billNav") {
-    billCard.style.visibility = "visible";
-  } else if (event.target.value === "menuButton") {
-    let allCards = document.querySelectorAll(".bigCard");
-    for (let i = 0; i < allCards.length; i++) {
-      allCards[i].style.visibility = "hidden";
+    event.preventDefault();
+    console.log("nav button has been clicked");
+    if (event.currentTarget.value === "foodNav") {
+        foodCard.style.visibility = "visible";
+    } else if (event.currentTarget.value === "entNav") {
+        entCard.style.visibility = "visible";
+    } else if (event.target.value === "cloNav") {
+        cloCard.style.visibility = "visible";
+    } else if (event.target.value === "billNav") {
+        billCard.style.visibility = "visible";
+    } else if (event.target.value === "menuButton") {
+        let allCards = document.querySelectorAll(".bigCard");
+        for (let i = 0; i < allCards.length; i++) {
+            allCards[i].style.visibility = "hidden";
+        }
+        menuCard.style.visibility = "visible";
     }
-    menuCard.style.visibility = "visible";
-  }
 }
 
 // !Visibility Functions
