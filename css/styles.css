@@ -1,73 +1,91 @@
 /* !Mains/Elements */
 
 * {
-  padding: 0;
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
 }
 
-html,
-body {
-  height: 100%;
-  width: 100%;
+html, body {
+    height: 100%;
+    width: 100%;
 }
 
 body {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
+
 main {
-  background: #fbfbfb;
-  position: relative;
+    background: #fbfbfb;
+    position: relative;
 }
+
 header {
-  height: 8vh;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  background: #90fa7f;
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #3B5284;
 }
+
+.logo {
+    size: 5px;
+}
+
+i {
+    color: white;
+    size: 10px;
+}
+
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 h2 {
-  text-align: center;
-  margin-bottom: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: white;
 }
+
 button {
-  width: 50%;
-  height: 30px;
-  border-radius: 10px;
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
 }
+
 input {
-  width: 75%;
-  height: 30px;
-  margin-bottom: 20px;
-  text-align: center;
-  border-radius: 10px;
-  padding-right: 5px;
+    width: 75%;
+    height: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding-right: 5px;
 }
+
 /* !ID Area */
+
 #formResBut {
-  margin-top: 50px;
-  width: 50%;
+    margin-top: 50px;
+    width: 50%;
 }
 
 /* !Card Classes */
+
 .bigCard {
-  height: 92vh;
-  width: 100%;
-  background: #ffffff;
-  position: absolute;
-  visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    height: 92vh;
+    width: 100%;
+    background: #3B5284;
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 .infoContainer {
   border: solid 1px black;
   height: 350px;
@@ -77,82 +95,120 @@ input {
   border-radius: 10px;
   overflow: scroll;
 }
+
 .cardForm {
-  height: 200px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
 /* !Opening Card */
+
 .opening_card {
-  background: #4a95ba;
-  color: #fbfbfb;
-  visibility: visible;
-  align-items: center;
+    background: #3B5284;
+    color: #fbfbfb;
+    visibility: visible;
+    align-items: center;
 }
-.opening_card > form {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 75%;
+
+.opening_card>form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 75%;
 }
 
 /* !Menu Card */
+
 .menuCard {
-  /* visibility: visible; */
-  text-align: center;
-  display: flex;
-  align-items: center;
+    /* visibility: visible; */
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
+
 .SmallCard {
-  height: 20%;
-  border-radius: 10px;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: solid 1px black;
-  width: 90%;
+    height: 20%;
+    border-radius: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 90%;
+    color: white;
 }
+
 /* !Food Card */
+
 .food {
-  /* visibility: visible; */
-  justify-content: space-around;
-  align-items: center;
-  z-index: 10;
+    /* visibility: visible; */
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    background: #5BA8A0;
 }
 
 /* !Entertainment Card */
+
 .ent {
-  /* visibility: visible; */
-  justify-content: space-around;
-  align-items: center;
+    /* visibility: visible; */
+    justify-content: space-around;
+    align-items: center;
+    background: #CBE54E;
 }
 
 /* !Clothing Card */
+
 .clo {
-  /* visibility: visible; */
-  justify-content: space-around;
-  align-items: center;
+    /* visibility: visible; */
+    justify-content: space-around;
+    align-items: center;
+    background: #94B447;
 }
 
 /* !Bill Card */
+
 .bills {
-  /* visibility: visible; */
-  justify-content: space-around;
-  align-items: center;
+    /* visibility: visible; */
+    justify-content: space-around;
+    align-items: center;
+    background: #5D6E1E;
 }
 
 /* !This class is placed down here so it doesn't get overruled */
+
 .menuButton {
-  width: 25%;
+    width: 25%;
+}
+
+
+/* small card color */
+
+#foodNav {
+    background: #5BA8A0;
+}
+
+#entNav {
+    background: #CBE54E;
+}
+
+#cloNav {
+    background: #94B447;
+#billNav {
+   background: #5D6E1E;
 }
 
 @media only screen and (min-width: 768px) {
+  div {
+        display: flex;
+        flex-direction: column;
+   }
   input {
     width: 50%;
   }
@@ -162,4 +218,7 @@ input {
   .infoContainer {
     width: 50%;
   }
+
 }
+
+

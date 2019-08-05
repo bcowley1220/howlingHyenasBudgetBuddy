@@ -1,34 +1,38 @@
 // !Class Section
 class List {
-  constructor() {
-    this.list = [];
-  }
-  add(name, price) {
-    let newItem = new Item(name, price);
-    this.list.push(newItem);
-  }
-  totalAdd(food, entertainment, clothing, bill) {
-    let newTotalItem = new FourItem(food, entertainment, clothing, bill);
-    this.list.push(newTotalItem);
-  }
+    constructor() {
+        this.list = [];
+    }
+    add(name, price) {
+        let newItem = new Item(name, price);
+        this.list.push(newItem);
+    }
+    totalAdd(food, entertainment, clothing, bill) {
+        let newTotalItem = new FourItem(food, entertainment, clothing, bill);
+        this.list.push(newTotalItem);
+    }
 }
 
 class Item {
+
+
   constructor(name, price) {
     this.name = name;
     this.price = Number(price);
   }
+
 }
 
 class FourItem {
-  constructor(food, entertainment, clothing, bill) {
-    this.food = Number(food);
-    this.entertainment = Number(entertainment);
-    this.clothing = Number(clothing);
-    this.bill = Number(bill);
-    this.total = this.food + this.entertainment + this.clothing + this.bill;
-  }
+    constructor(food, entertainment, clothing, bill) {
+        this.food = Number(food);
+        this.entertainment = Number(entertainment);
+        this.clothing = Number(clothing);
+        this.bill = Number(bill);
+        this.total = this.food + this.entertainment + this.clothing + this.bill;
+    }
 }
+
 
 // !Handling Functions
 
@@ -81,6 +85,7 @@ function onFormSubmit(event) {
     showTotals("#billBudget", budgetList.list[0].bill);
   }
   alertUser();
+
 }
 
 function alertUser() {
@@ -103,23 +108,23 @@ function updateTotal(listPosition, pLocation) {
 // !This function, on click of the right target, will change the
 // !visibility of the matching card.
 function onNavClick(event) {
-  event.preventDefault();
-  console.log("nav button has been clicked");
-  if (event.currentTarget.value === "foodNav") {
-    foodCard.style.visibility = "visible";
-  } else if (event.currentTarget.value === "entNav") {
-    entCard.style.visibility = "visible";
-  } else if (event.target.value === "cloNav") {
-    cloCard.style.visibility = "visible";
-  } else if (event.target.value === "billNav") {
-    billCard.style.visibility = "visible";
-  } else if (event.target.value === "menuButton") {
-    let allCards = document.querySelectorAll(".bigCard");
-    for (let i = 0; i < allCards.length; i++) {
-      allCards[i].style.visibility = "hidden";
+    event.preventDefault();
+    console.log("nav button has been clicked");
+    if (event.currentTarget.value === "foodNav") {
+        foodCard.style.visibility = "visible";
+    } else if (event.currentTarget.value === "entNav") {
+        entCard.style.visibility = "visible";
+    } else if (event.target.value === "cloNav") {
+        cloCard.style.visibility = "visible";
+    } else if (event.target.value === "billNav") {
+        billCard.style.visibility = "visible";
+    } else if (event.target.value === "menuButton") {
+        let allCards = document.querySelectorAll(".bigCard");
+        for (let i = 0; i < allCards.length; i++) {
+            allCards[i].style.visibility = "hidden";
+        }
+        menuCard.style.visibility = "visible";
     }
-    menuCard.style.visibility = "visible";
-  }
 }
 
 // !Visibility Functions
