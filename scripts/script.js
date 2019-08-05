@@ -30,25 +30,6 @@ class FourItem {
   }
 }
 
-function display(list, location) {
-  document.querySelector(location).innerHTML = "";
-  for (let item of list) {
-    const div = document.createElement("div");
-    // div.classList.add();
-    div.innerHTML = `
-      <p> ${item.name} $${item.price}</p>
-      `;
-    document.querySelector(location).append(div);
-  }
-}
-function showTotals(location, item) {
-  document.querySelector(location).innerHTML = "";
-  const div = document.createElement("div");
-  div.innerHTML = `
-<p>Budget: $${item}</p>`;
-  document.querySelector(location).append(div);
-}
-
 // !Handling Functions
 
 function onFormSubmit(event) {
@@ -104,6 +85,24 @@ function onNavClick(event) {
 }
 
 // !Visibility Functions
+function display(list, location) {
+  document.querySelector(location).innerHTML = "";
+  for (let item of list) {
+    const div = document.createElement("div");
+    // div.classList.add();
+    div.innerHTML = `
+      <p> ${item.name} $${item.price}</p>
+      `;
+    document.querySelector(location).append(div);
+  }
+}
+function showTotals(location, item) {
+  document.querySelector(location).innerHTML = "";
+  const div = document.createElement("div");
+  div.innerHTML = `
+<p>Budget: $${item}</p>`;
+  document.querySelector(location).append(div);
+}
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -154,8 +153,18 @@ menuNav.addEventListener("click", onNavClick);
 
 // budgetFormCard.addEventListener("click", onNavClick);
 
+// function mathFunction(){
+//   for (let i = 0; i < Array.length; i++){
+//     identify price value, subtract from total
+//   }
+// }
+
 // TODO
-// !Fix the nav function when you hit submit on main form it takes to menu
-// !If time, reset the array every time that we submit a new budget
+// !Math function:
+// !write function that takes price value and minuses from the total
+// if budgetList <= 0 alert customer
+// !Alert function: if budget <= 0, then alter user
+
+// CSS
 // !Blow up the font on the display boxes for each budget to fill space or shrink box
 // !Add logo to top
