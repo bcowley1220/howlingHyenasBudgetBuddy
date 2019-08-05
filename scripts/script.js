@@ -41,6 +41,7 @@ function onFormSubmit(event) {
     showTotals("#billBudget", budgetList.list[0].bill);
     showTotals("#totalBudget", budgetList.list[0].total);
     display(billList.list, "#itemBill");
+    billForm.reset();
   } else if (event.target[2].value === "clothing") {
     clothList.add(event.target[0].value, event.target[1].value);
     budgetList.list[0].clothing =
@@ -49,6 +50,7 @@ function onFormSubmit(event) {
     showTotals("#totalBudget", budgetList.list[0].total);
     showTotals("#clothingBudget", budgetList.list[0].clothing);
     display(clothList.list, "#itemCloth");
+    clothForm.reset();
   } else if (event.target[2].value === "food") {
     foodList.add(event.target[0].value, event.target[1].value);
     budgetList.list[0].food = budgetList.list[0].food - event.target[1].value;
@@ -56,6 +58,7 @@ function onFormSubmit(event) {
     showTotals("#totalBudget", budgetList.list[0].total);
     showTotals("#foodBudget", budgetList.list[0].food);
     display(foodList.list, "#itemFood");
+    foodForm.reset();
   } else if (event.target[2].value === "entertainment") {
     enterList.add(event.target[0].value, event.target[1].value);
     budgetList.list[0].entertainment =
@@ -65,6 +68,7 @@ function onFormSubmit(event) {
     showTotals("#entBudget", budgetList.list[0].entertainment);
     display(enterList.list, "#itemEnt");
     showTotals("#totalBudget", budgetList.list[0].total);
+    entForm.reset();
   } else if (event.target[4].value === "budget") {
     console.log("I am cardForm");
     budgetList.totalAdd(
